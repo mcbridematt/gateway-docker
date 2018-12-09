@@ -41,7 +41,7 @@ RUN echo "deb http://ftp.debian.org/debian stretch-backports main" >> /etc/apt/s
     ldconfig /usr/local/lib && \
     cd / && \
     rm -rf /tmp/open-zwave && \
-    usermod -a -G sudo node && \
+    usermod -a -G sudo,dialout node && \
     touch /etc/inittab && \
     echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
